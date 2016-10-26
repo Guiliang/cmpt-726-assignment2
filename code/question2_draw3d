@@ -1,0 +1,31 @@
+# from matplotlib import cm
+# from matplotlib.ticker import LinearLocator, FormatStrFormatter
+import matplotlib.pyplot as plt
+
+# import numpy as np
+# import mpl_toolkits.mplot3d.axes3d
+#
+# fig = plt.figure()
+# ax = fig.gca(projection='3d')
+# ax.set_xlabel('X1')
+# ax.set_ylabel('X2')
+# ax.set_zlabel('y2')
+# X1 = np.arange(-1.5, 1.5, 0.2)
+# X2 = np.arange(-1.5, 1.5, 0.2)
+# X1, X2 = np.meshgrid(X1, X2)
+#
+# Z1 = 6 + 2 * np.power(X1, 2) + 2 * np.power(X2, 2)
+# Z2 = 8
+# surf1 = ax.plot_wireframe(X1, X2, Z1, color='r')
+# surf2 = ax.plot_wireframe(X1, X2, Z2)
+# plt.title('Draw the function 3-D decision region')
+# ax.set_zlim(8, 15)
+# plt.show()
+
+fig = plt.figure(1)
+plt.axis([-2, 2, 2, -2])
+ax = fig.add_subplot(1, 1, 1)
+circ = plt.Circle((0, 0), radius=1, color='b', fill=False)
+ax.add_patch(circ)
+plt.title('Draw the function 2-D decision region')
+plt.show()
